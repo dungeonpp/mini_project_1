@@ -1,0 +1,23 @@
+<?php
+ 
+   
+        // Connecting to server
+        $m = new MongoClient("127.0.0.1");
+   $db = $m->Hospital;
+   echo "Database mydb selected";
+   $collection = $db->Patient;
+   echo "Collection selected succsessfully"
+
+
+
+$query = $db->Hospital->Patient->find();
+
+echo '<pre>';
+
+foreach ( $query as $current )
+    print_r($current);
+
+echo '</pre>';
+
+
+?>
